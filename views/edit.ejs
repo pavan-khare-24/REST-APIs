@@ -9,7 +9,7 @@
     <h2>Edit your post</h2>
     <p>post id : <%= post.id %></p>
     <p>post username : @<%= post.username %></p>
-    <form method="post" action="/posts/<%= post.id %>?_method=PATCH">
+    <form method="post" action="/posts/<%= post.id %>?_method=PATCH">  <!-- method-override, PATCH overrides POST request -->
         <textarea rows="10" cols="40" name="content"><%= post.content %></textarea> <br><br>
         <button>Submit</button>
     </form>
